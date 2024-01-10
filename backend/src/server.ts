@@ -14,8 +14,8 @@ app.use(urlencoded({ extended: true }));
 
 mongoose
   .connect("mongodb://mongo:27017/myapp")
-  .then(() => console.log("CHECKTHIS : connected"))
-  .catch((e) => console.log("CHECKTHIS", e));
+  .then(() => console.log("mongoose: connected"))
+  .catch((e) => console.log(e));
 
 app.use("/api/customers", customerRoutes);
 
